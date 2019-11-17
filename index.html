@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Krishi</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: eStartup
+    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">KRISHI</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="hero-container">
+      <h1>Welcome to Krishi</h1>
+      <h2>Elegant Bootstrap Template for Krishi, Apps.</h2>
+      <img src="img/hero-img.png" alt="Hero Imgs">
+      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
+      <div class="btns">
+        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
+        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
+        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
+      </div>
+    </div>
+  </section><!-- #hero -->
+
+  <!--==========================
+    Get Started Section
+  ============================-->
+  <section id="get-started" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Simple yet useful </h2>
+        <p class="separator">Upload image and get predictions</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+
+      <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Choose image file to upload</label>
+    <input type="file"  class="form-control-file" id="exampleFormControlFile1" style="padding: 10px;" onchange="readURL(this);">
+    <img id="blah" src="http://placehold.it/180" alt="your image" style="max-width: 180px;" />
+  </div>
+  <button type="button"  class="btn btn-primary"  onclick="loadDoc()">PREDICT !</button>
+</form><br>
+<div id="demo"></div>
+    </div>
+
+  </section>
+
+  <!--==========================
+    About Us Section
+  ============================-->
+  <section id="about-us" class="about-us padd-section wow fadeInUp">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-7 col-lg-5">
+          <div class="about-content">
+
+            <h2><span>Krishi</span> </h2>
+            <p>Crop diseases are a major threat to food security, but their rapid identification remains difficult in many parts of the world due to the lack of the necessary infrastructure.Using verified dataset of images of diseased and healthy plants , this application let you classify spam and non spam images and from the not spam images of crops, it let you find the diseases in it.
+            </p>
+
+            <ul class="list-unstyled">
+              <li><i class="fa fa-angle-right"></i>Creative Design</li>
+              <li><i class="fa fa-angle-right"></i>Retina Ready</li>
+              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
+              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Team Section
+  ============================-->
+  <section id="team" class="padd-section text-center wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+
+        <h2>Team Member</h2>
+        <p class="separator">Building it with FUN and lots of COFFEE</p>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="img/team/1.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <h4>Nikhil Srivastava</h4>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="img/team/2.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <h4>Laviksha Soni</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-4 col-lg-3">
+          <div class="team-block bottom">
+            <img src="img/team/3.jpg" class="img-responsive" alt="img">
+            <div class="team-content">
+              <ul class="list-unstyled">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+              <h4>Shivam Singhal</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>  
+
+  <!--==========================
+    Newsletter Section
+  ============================-->
+  <section id="newsletter" class="newsletter text-center wow fadeInUp">
+    <div class="overlay padd-section">
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-md-9 col-lg-6">
+            <form class="form-inline" method="POST" action="#">
+
+              <input type="email" class="form-control " placeholder="Email Adress" name="email">
+              <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
+
+            </form>
+
+          </div>
+        </div>
+
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Contact Section
+  ============================-->
+  <section id="contact" class="padd-section wow fadeInUp">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Contact</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-lg-3 col-md-4">
+
+          <div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>Sector - 53<br>NOIDA 302019</p>
+            </div>
+
+            <div class="email">
+              <i class="fa fa-envelope"></i>
+              <p>nikhil.srivastava944@gmail.com</p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 7726954715</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          </div>
+
+        </div>
+
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #contact -->
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Krishi</a>
+            <p>Crop diseases are a major threat to food security, but their rapid identification remains difficult in many parts of the world due to the lack of the necessary infrastructure.Using verified dataset of images of diseased and healthy plants , this application let you classify spam and non spam images and from the not spam images of crops, it let you find the diseases in it.</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+            <h4>About Us</h4>
+
+            <ul class="list-unstyled">
+              <li><a href="#about-us">About us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights KRISHI. All rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="js/reactt.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/modal-video/js/modal-video.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+  <script>
+function loadDoc() {
+
+var form = $('form')[0];
+var formData=new FormData(form);
+formData.append('image',$('input[type=file]')[0].files[0]);
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+      var myObj = JSON.parse(this.responseText);
+      var name= myObj.predictions;
+      if(name[0].tagName=="Not Spam")
+      {
+        if(name[0].probability>0.5)
+        {
+              
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {}
+
+                var myObj2 = JSON.parse(this.responseText); 
+                var name2= myObj2.predictions[0];
+                
+                  document.getElementById("demo").innerHTML = "Youre crop is suffering from : " + name2.tagName +
+                                                                " with probability " + name2.probability;
+                
+            };
+
+          xhttp.open("POST", "https://centralindia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/3a77a88c-be97-4667-a0ee-e6394c58c722/classify/iterations/Iteration1/image", true);
+            xhttp.setRequestHeader("Prediction-Key", "e0a61a9921ca4049af0f386fa66d684b");
+            xhttp.send(formData);
+
+
+        }
+      }
+
+      else{
+        if(name[0].probability>0.5)
+        {
+                document.getElementById("demo").innerHTML = "Spam pic please try another image !!!";
+        }
+     
+      }
+    }
+  };
+  xhttp.open("POST", "https://centralindia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/ae056986-7302-4d9d-97a9-415ae59ee721/classify/iterations/Iteration2/image", true);
+  xhttp.setRequestHeader("Prediction-Key", "e0a61a9921ca4049af0f386fa66d684b");
+  
+  xhttp.send(formData);
+}
+
+        function toDataURL(src, callback) {
+            var image = new Image();
+            image.crossOrigin = 'Anonymous';
+         
+            image.onload = function() {
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                canvas.height = this.naturalHeight;
+                canvas.width = this.naturalWidth;
+                context.drawImage(this, 0, 0);
+                var dataURL = canvas.toDataURL('image/jpeg');
+                callback(dataURL);
+            };
+
+            image.src = src;
+        }
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+
+</body>
+</html>
