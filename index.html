@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Krishi</title>
+  <title>Crop Classifier</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -43,7 +43,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto">KRISHI</a></h1>
+        <h1><a href="#body" class="scrollto">Crop Classifier</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
@@ -64,8 +64,8 @@
   ============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <h1>Welcome to Krishi</h1>
-      <h2>Elegant Bootstrap Template for Krishi, Apps.</h2>
+      <h1>Welcome to Crop Classifier</h1>
+      <h2>Elegant Bootstrap Template for Crop Classifier, Apps.</h2>
       <img src="img/hero-img.png" alt="Hero Imgs">
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
@@ -100,10 +100,11 @@
   </div>
   <button type="button"  class="btn btn-primary"  onclick="loadDoc()">PREDICT !</button>
 </form><br>
-<div id="demo"></div>
-    </div>
-
-  </section>
+<div id="demo" class="badge badge-warning"></div>
+</div>
+<div id="spam" class="badge badge-danger"></div>
+</div>
+</section>
 
   <!--==========================
     About Us Section
@@ -115,7 +116,7 @@
         <div class="col-md-7 col-lg-5">
           <div class="about-content">
 
-            <h2><span>Krishi</span> </h2>
+            <h2><span>Crop Classifier</span> </h2>
             <p>Crop diseases are a major threat to food security, but their rapid identification remains difficult in many parts of the world due to the lack of the necessary infrastructure.Using verified dataset of images of diseased and healthy plants , this application let you classify spam and non spam images and from the not spam images of crops, it let you find the diseases in it.
             </p>
 
@@ -310,7 +311,7 @@
         <div class="col-md-12 col-lg-4">
           <div class="footer-logo">
 
-            <a class="navbar-brand" href="#">Krishi</a>
+            <a class="navbar-brand" href="#">Crop Classifier</a>
             <p>Crop diseases are a major threat to food security, but their rapid identification remains difficult in many parts of the world due to the lack of the necessary infrastructure.Using verified dataset of images of diseased and healthy plants , this application let you classify spam and non spam images and from the not spam images of crops, it let you find the diseases in it.</p>
 
           </div>
@@ -373,7 +374,7 @@
 
     <div class="copyrights">
       <div class="container">
-        <p>&copy; Copyrights KRISHI. All rights reserved.</p>
+        <p>&copy; Copyrights Crop Classifier. All rights reserved.</p>
       </div>
     </div>
 
@@ -423,34 +424,24 @@ formData.append('image',$('input[type=file]')[0].files[0]);
       {
         if(name[0].probability>0.5)
         {
-              
-
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {}
-
                 var myObj2 = JSON.parse(this.responseText); 
-                var name2= myObj2.predictions[0];
-                
-                  document.getElementById("demo").innerHTML = "Youre crop is suffering from : " + name2.tagName +
-                                                                " with probability " + name2.probability;
-                
+                var name2= myObj2.predictions[0];                
+                document.getElementById("demo").innerHTML = "Your crop is suffering from : " + name2.tagName +
+                                                                " with probability " + name2.probability;                
             };
-
-          xhttp.open("POST", "https://centralindia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/3a77a88c-be97-4667-a0ee-e6394c58c722/classify/iterations/Iteration1/image", true);
+            xhttp.open("POST", "https://centralindia.api.cognitive.microsoft.com/customvision/v3.0/Prediction/3a77a88c-be97-4667-a0ee-e6394c58c722/classify/iterations/Iteration1/image", true);
             xhttp.setRequestHeader("Prediction-Key", "e0a61a9921ca4049af0f386fa66d684b");
             xhttp.send(formData);
-
-
         }
       }
-
       else{
         if(name[0].probability>0.5)
         {
-                document.getElementById("demo").innerHTML = "Spam pic please try another image !!!";
-        }
-     
+          document.getElementById("spam").innerHTML = "Spam pic please try another image !!!";
+        }    
       }
     }
   };
@@ -459,36 +450,16 @@ formData.append('image',$('input[type=file]')[0].files[0]);
   
   xhttp.send(formData);
 }
-
-        function toDataURL(src, callback) {
-            var image = new Image();
-            image.crossOrigin = 'Anonymous';
-         
-            image.onload = function() {
-                var canvas = document.createElement('canvas');
-                var context = canvas.getContext('2d');
-                canvas.height = this.naturalHeight;
-                canvas.width = this.naturalWidth;
-                context.drawImage(this, 0, 0);
-                var dataURL = canvas.toDataURL('image/jpeg');
-                callback(dataURL);
-            };
-
-            image.src = src;
-        }
-
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('#blah')
-                        .attr('src', e.target.result);
-                };
-
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      $('#blah')
+      .attr('src', e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
 </script>
 
 </body>
